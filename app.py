@@ -27,6 +27,7 @@ def update_scene():
         delete_all_widgets()
         scenes.scene2(root)
 
+
 # Initialize Window
 root = tk.Tk()
 root.state("zoomed")
