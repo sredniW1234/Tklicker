@@ -2,10 +2,9 @@
 import json
 import scenes
 import tkinter as tk
-from tkinter import font
 
 # variables
-state = 0  # State of the app: 1 = main menu, 2 = main app, 3 = minimized app
+state = 0  # State of the app: 1 = main menu, 2 = save selector, 3 = main app, 4 = minimized app
 
 
 # Functions
@@ -26,6 +25,13 @@ def update_scene():
     if state == 2:
         delete_all_widgets()
         scenes.scene2(root)
+
+def Load_save():
+    pass
+
+
+
+
 
 
 # Initialize Window
