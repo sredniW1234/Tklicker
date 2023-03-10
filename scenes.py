@@ -9,7 +9,7 @@ def scene1(root, func):
     tk.Button(s1, text="Play", width=10, font=("Arial", 20), command=func, bg="beige").pack()
 
 
-def scene2(root):
+def scene2(root, func):
     if json.load(open("save_1_data.json")) == {}:
         save1_ = "New Game"
         save1 = False
@@ -29,6 +29,19 @@ def scene2(root):
         save3_ = "Load Game"
         save3 = True
     s2 = tk.Frame(root).pack()
-    tk.Button(s2, text=save1_).pack()
-    tk.Button(s2, text=save2_).pack()
-    tk.Button(s2, text=save3_).pack()
+    tk.Button(s2, text=save1_, font=("Arial", 30), width=10, command=lambda: func(save1)).pack()
+    tk.Button(s2, text=save2_, font=("Arial", 30), width=10, command=lambda: func(save2)).pack()
+    tk.Button(s2, text=save3_, font=("Arial", 30), width=10, command=lambda: func(save3)).pack()
+
+
+def scene3(root, data={}):
+    s3 = tk.Frame(root).grid(row=0, column=0)
+    if data == {}:
+        pass
+    else:
+        pass
+
+    general_info = tk.Frame(s3).grid(row=0, column=0, columnspan=1)
+    shop = tk.Frame(s3).grid(row=1, column=0)
+    tk_button = tk.Frame(s3).grid(row=1, column=1)
+    tk.button(general_info).grid()
